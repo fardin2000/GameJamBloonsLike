@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2voc0fx6dhlk"]
+
+[ext_resource type="Script" uid="uid://bvufxpwgarj52" path="res://ui/info_bar.gd" id="1_xdwts"]
+[ext_resource type="Script" uid="uid://cibcfgo6utwcf" path="res://ui/money_display.gd" id="2_rqkrx"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rqkrx"]
+size = Vector2(25, 25)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4p00"]
+font_size = 10
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ijaiv"]
+size = Vector2(25, 25)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i6gn7"]
+font_size = 10
+
+[node name="InfoBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xdwts")
+
+[node name="Bar" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 15.0
+offset_bottom = 23.0
+
+[node name="HealthInfo" type="HBoxContainer" parent="Bar"]
+layout_mode = 2
+
+[node name="Heart" type="TextureRect" parent="Bar/HealthInfo"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_rqkrx")
+
+[node name="CurrentHealth" type="Label" parent="Bar/HealthInfo"]
+layout_mode = 2
+text = "CurrentHealth"
+label_settings = SubResource("LabelSettings_n4p00")
+
+[node name="MoneyInfo" type="HBoxContainer" parent="Bar"]
+layout_mode = 2
+script = ExtResource("2_rqkrx")
+
+[node name="Coin" type="TextureRect" parent="Bar/MoneyInfo"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_ijaiv")
+
+[node name="CurrentMoney" type="Label" parent="Bar/MoneyInfo"]
+layout_mode = 2
+text = "CurrentMoney"
+label_settings = SubResource("LabelSettings_i6gn7")
+
+[node name="RoundInfo" type="HBoxContainer" parent="Bar"]
+layout_mode = 2
+
+[node name="Fish" type="TextureRect" parent="Bar/RoundInfo"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_ijaiv")
+
+[node name="CurrentRound" type="Label" parent="Bar/RoundInfo"]
+layout_mode = 2
+text = "CurrentRound"
+label_settings = SubResource("LabelSettings_i6gn7")

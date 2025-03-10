@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq28ji0rdxj3d"]
+
+[ext_resource type="Script" uid="uid://duvyrcrfcgke5" path="res://ui/overlays/conversation_overlay.gd" id="1_2f7bd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u3whu"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_qmw5i"]
+font_size = 10
+
+[node name="ConversationOverlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2f7bd")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ChatBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterName" type="Label" parent="Panel/ChatBox"]
+layout_mode = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_u3whu")
+
+[node name="SpeechText" type="Label" parent="Panel/ChatBox"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+label_settings = SubResource("LabelSettings_qmw5i")
+vertical_alignment = 3
+autowrap_mode = 2
+clip_text = true

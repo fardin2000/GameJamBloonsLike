@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/Enemy/base_enemy.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scenes/Enemy/purple_enemy.gd" id="2_purple"]
+
+[node name="PurpleEnemy" instance=ExtResource("1_base")]
+script = ExtResource("2_purple")
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0.5, 0, 0.5, 1)  # Purple color 

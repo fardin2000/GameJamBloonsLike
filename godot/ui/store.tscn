@@ -1,0 +1,482 @@
+[gd_scene load_steps=18 format=3 uid="uid://i8e2stbpj7dh"]
+
+[ext_resource type="Script" uid="uid://dy18vp6iyxivk" path="res://ui/store.gd" id="1_kj3tv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kj3tv"]
+font_size = 12
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cjrdt"]
+size = Vector2(15, 10)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_eflcf"]
+size = Vector2(100, 100)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u1bgn"]
+line_spacing = 0.0
+font_size = 8
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_od2if"]
+size = Vector2(15, 15)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1t74p"]
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4as3"]
+line_spacing = 0.0
+font_size = 8
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yt1xy"]
+size = Vector2(15, 15)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7it5l"]
+line_spacing = 0.0
+font_size = 11
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4r5jn"]
+size = Vector2(5, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2y150"]
+line_spacing = 0.0
+font_size = 13
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eyxuv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cjrdt"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_86hck"]
+font_size = 9
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_einsu"]
+size = Vector2(20, 20)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4i8bu"]
+size = Vector2(20, 20)
+
+[node name="Store" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kj3tv")
+
+[node name="StoreContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -162.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="UpgradeStore" type="Panel" parent="StoreContainer"]
+visible = false
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StoreContainer/UpgradeStore"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 3
+
+[node name="TowerName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+text = "TowerName"
+label_settings = SubResource("LabelSettings_kj3tv")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="FishIcon" type="TextureRect" parent="StoreContainer/UpgradeStore/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_cjrdt")
+
+[node name="KillCount" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_kj3tv")
+horizontal_alignment = 1
+
+[node name="TowerIcon" type="TextureRect" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_eflcf")
+stretch_mode = 3
+
+[node name="Upgrade1" type="HBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="UpgradeLights" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1"]
+layout_mode = 2
+alignment = 1
+
+[node name="Unlock1" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock2" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock3" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock4" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock5" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="PrevUpgrade" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PrevUpgradeName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/PrevUpgrade"]
+layout_mode = 2
+text = "UpgradeName"
+label_settings = SubResource("LabelSettings_u1bgn")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/PrevUpgrade"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_od2if")
+flat = true
+icon_alignment = 1
+
+[node name="Owned" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/PrevUpgrade"]
+layout_mode = 2
+text = "Owned"
+label_settings = SubResource("LabelSettings_1t74p")
+horizontal_alignment = 1
+
+[node name="NextUpgrade" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NextUpgradeName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/NextUpgrade"]
+layout_mode = 2
+text = "UpgradeName"
+label_settings = SubResource("LabelSettings_c4as3")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/NextUpgrade"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_yt1xy")
+icon_alignment = 1
+
+[node name="Cost" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade1/NextUpgrade"]
+layout_mode = 2
+text = "$999"
+label_settings = SubResource("LabelSettings_7it5l")
+horizontal_alignment = 1
+
+[node name="Upgrade2" type="HBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="UpgradeLights" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2"]
+layout_mode = 2
+alignment = 1
+
+[node name="Unlock1" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock2" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock3" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock4" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock5" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="PrevUpgrade" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PrevUpgradeName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/PrevUpgrade"]
+layout_mode = 2
+text = "UpgradeName"
+label_settings = SubResource("LabelSettings_u1bgn")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/PrevUpgrade"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_od2if")
+flat = true
+icon_alignment = 1
+
+[node name="Owned" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/PrevUpgrade"]
+layout_mode = 2
+text = "Owned"
+label_settings = SubResource("LabelSettings_1t74p")
+horizontal_alignment = 1
+
+[node name="NextUpgrade" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NextUpgradeName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/NextUpgrade"]
+layout_mode = 2
+text = "UpgradeName"
+label_settings = SubResource("LabelSettings_c4as3")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/NextUpgrade"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_yt1xy")
+icon_alignment = 1
+
+[node name="Cost" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade2/NextUpgrade"]
+layout_mode = 2
+text = "$999"
+label_settings = SubResource("LabelSettings_7it5l")
+horizontal_alignment = 1
+
+[node name="Upgrade3" type="HBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="UpgradeLights" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3"]
+layout_mode = 2
+alignment = 1
+
+[node name="Unlock1" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock2" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock3" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock4" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="Unlock5" type="ColorRect" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/UpgradeLights"]
+custom_minimum_size = Vector2(5, 5)
+layout_mode = 2
+color = Color(0.0807833, 0.0807833, 0.0807833, 1)
+
+[node name="PrevUpgrade" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="PrevUpgradeName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/PrevUpgrade"]
+layout_mode = 2
+text = "UpgradeName"
+label_settings = SubResource("LabelSettings_u1bgn")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/PrevUpgrade"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_od2if")
+flat = true
+icon_alignment = 1
+
+[node name="Owned" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/PrevUpgrade"]
+layout_mode = 2
+text = "Owned"
+label_settings = SubResource("LabelSettings_1t74p")
+horizontal_alignment = 1
+
+[node name="NextUpgrade" type="VBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NextUpgradeName" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/NextUpgrade"]
+layout_mode = 2
+text = "UpgradeName"
+label_settings = SubResource("LabelSettings_c4as3")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/NextUpgrade"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_yt1xy")
+icon_alignment = 1
+
+[node name="Cost" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/Upgrade3/NextUpgrade"]
+layout_mode = 2
+text = "$999"
+label_settings = SubResource("LabelSettings_7it5l")
+horizontal_alignment = 1
+
+[node name="SellContainer" type="HBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="IconAndPrice" type="HBoxContainer" parent="StoreContainer/UpgradeStore/VBoxContainer/SellContainer"]
+layout_mode = 2
+
+[node name="CoinIcon" type="TextureRect" parent="StoreContainer/UpgradeStore/VBoxContainer/SellContainer/IconAndPrice"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_4r5jn")
+expand_mode = 2
+
+[node name="SellPrice" type="Label" parent="StoreContainer/UpgradeStore/VBoxContainer/SellContainer/IconAndPrice"]
+layout_mode = 2
+text = "$999"
+label_settings = SubResource("LabelSettings_2y150")
+
+[node name="SellButton" type="Button" parent="StoreContainer/UpgradeStore/VBoxContainer/SellContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_eyxuv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_eyxuv")
+text = "Sell"
+
+[node name="VSeparator" type="VSeparator" parent="StoreContainer"]
+layout_mode = 2
+
+[node name="TowerStore" type="Panel" parent="StoreContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StoreContainer/TowerStore"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -33.0
+offset_right = 33.0
+offset_bottom = 248.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="StoreContainer/TowerStore/VBoxContainer"]
+layout_mode = 2
+text = "Upgrades"
+label_settings = SubResource("LabelSettings_cjrdt")
+
+[node name="Button" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -10.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.18092, 0.914216)
+flat = true
+
+[node name="HSeparator" type="HSeparator" parent="StoreContainer/TowerStore/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="StoreContainer/TowerStore/VBoxContainer"]
+layout_mode = 2
+text = "Selected Tower"
+label_settings = SubResource("LabelSettings_86hck")
+
+[node name="TowerContainer" type="HBoxContainer" parent="StoreContainer/TowerStore/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TowerRow1" type="VBoxContainer" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer"]
+layout_mode = 2
+
+[node name="TowerBear" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow1"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_einsu")
+
+[node name="Otter" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow1"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_einsu")
+
+[node name="Bobcat" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow1"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_einsu")
+
+[node name="Button4" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow1"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_einsu")
+
+[node name="Button5" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow1"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_einsu")
+
+[node name="TowerRow2" type="VBoxContainer" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Heuron" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow2"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_4i8bu")
+
+[node name="Minx" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow2"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_4i8bu")
+
+[node name="Wolf" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow2"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_4i8bu")
+
+[node name="Button6" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow2"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_4i8bu")
+
+[node name="Button7" type="Button" parent="StoreContainer/TowerStore/VBoxContainer/TowerContainer/TowerRow2"]
+layout_mode = 2
+icon = SubResource("PlaceholderTexture2D_4i8bu")
+
+[node name="HSeparator2" type="HSeparator" parent="StoreContainer/TowerStore/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="StoreContainer/TowerStore/VBoxContainer"]
+layout_mode = 2
+text = "Start"
