@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cik30de5gaaah"]
+[gd_scene load_steps=17 format=4 uid="uid://cik30de5gaaah"]
 
 [ext_resource type="Script" uid="uid://bqjdph4mocpw4" path="res://scenes/ingame_scene.gd" id="1_objyc"]
 [ext_resource type="PackedScene" uid="uid://bkk87o2ooo6at" path="res://ui/overlays/fade_overlay.tscn" id="1_y6ebv"]
@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://b562tax7eouom" path="res://scenes/Managers/build_manager.gd" id="7_5fi20"]
 [ext_resource type="Script" uid="uid://cpi302xs0rc7q" path="res://scenes/Managers/RoundManager.gd" id="9_1sh3m"]
 [ext_resource type="Script" uid="uid://cdcsfkaue3pfh" path="res://scenes/Managers/economy_manager.gd" id="10_iid22"]
-[ext_resource type="Texture2D" uid="uid://db1p86g8pb7ka" path="res://assets/IMG_1605.png" id="13_juwkt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dr5tw"]
 texture = ExtResource("4_whno7")
@@ -152,8 +151,3 @@ script = ExtResource("10_iid22")
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
 anchor_mode = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(888, 209)
-scale = Vector2(0.325, 0.325)
-texture = ExtResource("13_juwkt")

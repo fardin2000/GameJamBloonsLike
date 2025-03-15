@@ -18,7 +18,7 @@ var current_wave_index = 0
 @onready var path_node: Node2D = get_node("../Path2D")
 
 signal wave_completed(wave_index)
-signal wave_enemies_defeated(wave_index)
+signal wave_enemies_defeated()
 signal enemy_spawned(enemy)
 
 func _enter_tree() -> void:
@@ -94,7 +94,7 @@ func check_wave_completion() -> void:
 	if remaining_enemies.is_empty():
 		current_wave = null
 		wave_in_progress = false
-		emit_signal("wave_enemies_defeated", current_wave_index)
+		emit_signal("wave_enemies_defeated")
 
 func _on_enemy_defeated(enemy) -> void:
 	active_enemies.erase(enemy)
